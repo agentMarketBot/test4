@@ -1,24 +1,34 @@
 import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import { setupCountdown } from './countdown.js'
 
 document.querySelector('#app').innerHTML = `
   <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
+    <h1>Countdown Timer</h1>
+    <div class="countdown-container">
+      <div class="time-inputs">
+        <div class="input-group">
+          <label for="hours">Hours</label>
+          <input type="number" id="hours" min="0" max="23" value="0">
+        </div>
+        <div class="input-group">
+          <label for="minutes">Minutes</label>
+          <input type="number" id="minutes" min="0" max="59" value="5">
+        </div>
+        <div class="input-group">
+          <label for="seconds">Seconds</label>
+          <input type="number" id="seconds" min="0" max="59" value="0">
+        </div>
+      </div>
+      <div class="display">
+        <div id="countdown-display">05:00</div>
+      </div>
+      <div class="controls">
+        <button id="start-btn" type="button">Start</button>
+        <button id="pause-btn" type="button" disabled>Pause</button>
+        <button id="reset-btn" type="button">Reset</button>
+      </div>
     </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
   </div>
 `
 
-setupCounter(document.querySelector('#counter'))
+setupCountdown()
