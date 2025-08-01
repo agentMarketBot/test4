@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown App</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <h1>Countdown Timer</h1>
+        <div class="countdown-display">
+          <div class="time-unit">
+            <span id="days" class="time-value">00</span>
+            <span class="time-label">Days</span>
+          </div>
+          <div class="time-unit">
+            <span id="hours" class="time-value">00</span>
+            <span class="time-label">Hours</span>
+          </div>
+          <div class="time-unit">
+            <span id="minutes" class="time-value">00</span>
+            <span class="time-label">Minutes</span>
+          </div>
+          <div class="time-unit">
+            <span id="seconds" class="time-value">00</span>
+            <span class="time-label">Seconds</span>
+          </div>
+        </div>
+        <div class="controls">
+          <input type="datetime-local" id="targetDate" />
+          <button id="startBtn">Start Countdown</button>
+          <button id="resetBtn">Reset</button>
+        </div>
+        <div id="message" class="message"></div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
